@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  keycloak:
+    image: quay.io/keycloak/keycloak:23.0
+    container_name: oidc-keycloak
+    environment:
+      # 管理者ユーザーの設定
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: admin
+
+      # データベース設定（開発用はH2を使用）
+      KC_DB: dev-file
+
+      # HTTPモードで起動（開発用）
+      KC_HTTP_ENABLED: "true"
+      KC_HOSTNAME_STRICT: "false"
+      KC_HOSTNAME_STRICT_HTTPS: "false"
+
+    ports:
+      # Keycloak管理画面とエンドポイント
+      - "8080:8080"
+
+    command:
+      - start-dev
+
+    volumes:
+      # データ永続化（Realmやユーザー情報を保存）
+      - ./keycloak-data:/opt/keycloak/data
+
+    networks:
+      - oidc-network
+
+networks:
+  oidc-network:
+    driver: bridge

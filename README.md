@@ -1,11 +1,45 @@
 # OpenID Connect (OIDC) ハンズオン教材
 
+## はじめに
+
+このリポジトリは、OpenID Connect (OIDC) を実践的に学ぶためのハンズオン教材です。
+理論から実装まで、ステップバイステップで学んでいきます。
+
+## 📚 ハンズオン教材の構成
+
+### Part 1: 基礎理解
+- **このREADME**: OIDC の概要とデータフロー
+- **[docs/01-keycloak-basics.md](docs/01-keycloak-basics.md)**: Keycloak の基礎知識
+
+### Part 2: 環境構築と実践
+- **[docs/02-keycloak-setup.md](docs/02-keycloak-setup.md)**: Keycloak のセットアップ（ステップバイステップ）
+- **docs/03-client-app.md**: クライアントアプリケーションの実装（次のステップ）
+
+### Part 3: デバッグとOAuth
+- ブラウザでのデバッグ方法
+- OAuth 2.0 ハンズオン
+
+## 🚀 クイックスタート
+
+```bash
+# 1. Keycloakを起動
+docker-compose up -d
+
+# 2. 管理画面にアクセス
+# http://localhost:8080/admin
+# Username: admin / Password: admin
+
+# 3. ハンズオン資料に従って設定
+# docs/02-keycloak-setup.md を参照
+```
+
+---
+
 ## 目次
 1. [OpenID Connectとは](#openid-connectとは)
 2. [登場人物とその役割](#登場人物とその役割)
 3. [データフローの理解](#データフローの理解)
-4. [環境構築](#環境構築)
-5. [実装ハンズオン](#実装ハンズオン)
+4. [重要なトークンの種類](#重要なトークンの種類)
 
 ---
 
@@ -256,6 +290,11 @@ eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI...
 
 ---
 
-次のステップでは、実際に環境を構築してOIDCを動かしてみます！
+## 次のステップ
 
-準備ができたら教えてください。次は「環境構築」に進みます。
+✅ OIDC の基本概念を理解しました！
+
+次は実際に Keycloak を使って環境を構築しましょう：
+
+👉 **[docs/01-keycloak-basics.md](docs/01-keycloak-basics.md)** - Keycloak の基礎知識を学ぶ
+👉 **[docs/02-keycloak-setup.md](docs/02-keycloak-setup.md)** - Keycloak をセットアップする
