@@ -8,6 +8,7 @@
 ## 📚 ハンズオン教材の構成
 
 ### Part 1: 基礎理解
+- **[docs/00-history-and-trends.md](docs/00-history-and-trends.md)**: 認証認可の歴史とOAuth/OIDCの誕生背景、最新トレンド 🆕
 - **このREADME**: OIDC の概要とデータフロー
 - **[docs/01-keycloak-basics.md](docs/01-keycloak-basics.md)**: Keycloak の基礎知識
 
